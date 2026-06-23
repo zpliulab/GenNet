@@ -1,6 +1,6 @@
-# RegulationFM: A Foundation Model for Generating Gene Regulatory Networks from Single-Cell Multi-Omics Data # 
+# GenNet generates topology-aware gene regulatory networks from single-cell multi-omics data # 
 
-RegulationFM is a foundation model for accurate and interpretable Gene Regulatory Network reconstruction directly from single-cell multi-omics data. It integrates scRNA-seq, scATAC-seq, and other omics to learn joint representations, then uses a discrete diffusion generative module to generate GRNs at scale.
+GenNet is a foundation model for accurate and interpretable Gene Regulatory Network reconstruction directly from single-cell multi-omics data. It integrates scRNA-seq, scATAC-seq, and other omics to learn joint representations, then uses a discrete diffusion generative module to generate GRNs at scale.
 
 > Abbreviations used:  
 > GRN - Gene Regulatory Network  
@@ -9,7 +9,7 @@ RegulationFM is a foundation model for accurate and interpretable Gene Regulator
 
 
 <div align="center">
-  <img src="https://github.com/zpliulab/RegulationFM/blob/main/images/images1.jpg" alt="Schematic diagram of RegulationFM generation network" style="width: 1500px; height: 195px;"/>
+  <img src="https://github.com/zpliulab/GenNet/blob/main/images/images1.jpg" alt="Schematic diagram of GenNet generation network" style="width: 1500px; height: 195px;"/>
 </div>
 
 ## Requirements ![Python](https://img.shields.io/badge/python-3.10-blue "Python3.10")
@@ -35,8 +35,8 @@ Other packages
 You can create a minimal environment with:
 
 ```bash
-conda create -n RegulationFM python=3.10 -y
-conda activate RegulationFM
+conda create -n GenNet python=3.10 -y
+conda activate GenNet
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
 ```
 ## Project Structure
@@ -79,8 +79,8 @@ RegulationGPT/
 │
 ├── results_checkpoint/             # Saved model weights and results
 │
-├── run_RegulationFM.py             # Main script for training and testing on simulation data
-├── run_RegulationFM_MI.py          # Example script for myocardial infarction case
+├── run_GenNet.py             # Main script for training and testing on simulation data
+├── run_GenNet_MI.py          # Example script for myocardial infarction case
 └── README.md
 ```
 ## Data Preparation 
@@ -108,12 +108,12 @@ The simulation datasets used to reproduce our results is hosted on Zenodo:
 ## Quick Start
 
 <div align="center">
-  <img src="https://github.com/zpliulab/RegulationFM/blob/main/images/network.gif" alt="Schematic diagram of RegulationFM generation network" style="width: 500px; height: 500px;"/>
+  <img src="https://github.com/zpliulab/GenNet/blob/main/images/network.gif" alt="Schematic diagram of GenNet generation network" style="width: 500px; height: 500px;"/>
 </div>
 
 ### A. Train the model
 
-Use `run_RegulationFM.py` as a reference.
+Use `run_GenNet.py` as a reference.
 
 1. Configure parameters in `config/RegulationGPT_config.py`.
 2. (Optional) Build a baseline GRN from scATAC-seq co-accessibility.
@@ -177,4 +177,4 @@ The manuscript is currently in preparation.
 For questions please contact: zpliu@sdu.edu.cn.
 
 ## License
-RegulationFM is released under an MIT License.
+GenNet is released under an MIT License.
